@@ -4,7 +4,7 @@ FROM tomcat:9.0-jre8
 RUN mkdir /usr/local/tomcat
 # Copy the war file to the webapps directory
 RUN mkdir /usr/local/tomcat
-RUN cd /usr/local/tomcat
+RUN cd /usr/local/tomcat/
 RUN cp /var/lib/jenkins/workspace/Project-Docker/target/ABCtechnologies-1.0  .
 # Expose the default Tomcat port
 ADD **/*.war /usr/local/tomcat/webapps
