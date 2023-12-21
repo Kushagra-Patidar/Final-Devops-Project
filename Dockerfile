@@ -5,7 +5,7 @@ ENV WAR_FILE_NAME ABCtechnologies_1.0.war
 # Create application directory
 RUN mkdir /usr/local/tomcat
 # Copy the war file to the webapps directory
-COPY ${ABCtechnologies-1.0.war} /usr/local/tomcat/
+COPY ${ABCtechnologies_1.0.war} /usr/local/tomcat/
 # Expose the default Tomcat port
 EXPOSE 8080
 # Start Tomcat
