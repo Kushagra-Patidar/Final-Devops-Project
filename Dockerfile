@@ -1,12 +1,13 @@
 # Use an official Tomcat runtime as a parent image
 FROM tomcat:9.0-jre8
-# Set environment variables
-ENV WAR_FILE_NAME ABCtechnologies_1.0.war
 # Create application directory
 RUN mkdir /usr/local/tomcat
 # Copy the war file to the webapps directory
-COPY ${ABCtechnologies_1.0.war} /usr/local/tomcat/
+sudo mkdir /usr/local/tomcat
+cd /usr/local/tomcat
+cp /var/lib/jenkins/workspace/Project-Docker/target/ABCtechnologies-1.0  .
 # Expose the default Tomcat port
+ADD **/*.war /usr/local/tomcat/webapps
 EXPOSE 8080
 # Start Tomcat
 CMD ["catalina.sh", "run"]
