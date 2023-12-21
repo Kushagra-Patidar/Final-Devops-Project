@@ -1,6 +1,7 @@
 # Use an official Tomcat runtime as a parent image
 FROM tomcat:9.0-jre8
-# Create application directory
+# Create application director
+RUN rm -rf /usr/local/tomcat
 RUN mkdir /usr/local/tomcat
 # Copy the war file to the webapps directory
 RUN cd /usr/local/tomcat/
