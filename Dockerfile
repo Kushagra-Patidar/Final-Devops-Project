@@ -1,7 +1,7 @@
 # Use an official Tomcat runtime as a parent image
 FROM tomcat:9.0-jre8
 # Set environment variables
-ENV WAR_FILE_NAME ABCtechnologies-1.0.war
+ENV WAR_FILE_NAME ABCtechnologies_1.0.war
 # Create application directory
 RUN mkdir /usr/local/tomcat
 # Copy the war file to the webapps directory
