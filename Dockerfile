@@ -37,4 +37,4 @@ RUN cd /tmp &&  tar xvfz apache-tomcat-9.0.84.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-9.0.84/* /usr/local/tomcat/
 ADD **/*.war /usr/local/tomcat/webapps
 EXPOSE 8080
-CMD ["catalina.sh", "run"]
+CMD /usr/local/tomcat/bin/catalina.sh run
