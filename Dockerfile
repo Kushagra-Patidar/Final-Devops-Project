@@ -28,7 +28,7 @@
 
 
 
-FROM ubuntu:22.04
+FROM docker.io/library/ubuntu:22.04
 RUN apt-get -y update && apt-get -y upgrade
 RUN apt-get -y install openjdk-8-jdk wget vim curl
 RUN mkdir /usr/local/tomcat
