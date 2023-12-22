@@ -17,13 +17,10 @@ FROM tomcat:9.0-jre8
 
 # Create application directory
 RUN mkdir -p /usr/local/tomcat/webapps
-RUN cd /usr/local/tomcat/webapps/
+COPY  /var/lib/jenkins/workspace/Project-Docker/target/ABCtechnologies-1.0.war  /usr/local/tomcat/webapps/
 # Copy the war file to the webapps directory
-COPY  /var/lib/jenkins/workspace/Project-Docker/target/ABCtechnologies-1.0.war  .
- 
-# Expose the default Tomcat port
 EXPOSE 8080
-
+# Expose the default Tomcat port
 # Start Tomcat
 CMD ["catalina.sh", "run"]
 
