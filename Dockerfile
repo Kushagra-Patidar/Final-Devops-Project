@@ -35,6 +35,6 @@ RUN mkdir /usr/local/tomcat
 ADD https://downloads.apache.org/tomcat/tomcat-9/v9.0.84/bin/apache-tomcat-9.0.84.tar.gz  /tmp/apache-tomcat-9.0.84.tar.gz
 RUN cd /tmp &&  tar xvfz apache-tomcat-9.0.84.tar.gz
 RUN cp -Rv /tmp/apache-tomcat-9.0.84/* /usr/local/tomcat/
-ADD **/*.war /usr/local/tomcat/webapps/
+ADD ABCtechnologies-1.0.war  /usr/local/tomcat/webapps/
 EXPOSE 8080
 CMD /usr/local/tomcat/bin/catalina.sh run
