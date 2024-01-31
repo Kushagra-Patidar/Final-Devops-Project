@@ -2,7 +2,7 @@
   become: yes
   tasks:
         - name: Log in to Docker Hub
-          community.docker.docker_login:
+          community.general.docker_login:
               username: kushdocker007
               password: RedHat@123
               registry: docker.io
